@@ -3,9 +3,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "seed": "node ./seeders/index.js"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "mongo-seeding": "^3.7.0",
     "mongoose": "^6.0.11",
     "next": "latest",
     "react": "^17.0.2",
