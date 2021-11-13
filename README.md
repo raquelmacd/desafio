@@ -27,3 +27,6 @@ As rotas do aplicativo são:
 - Cadastrar -> POST /api/conectores
 - Filtrar -> GET /api/conectores/
 No body enviar { name, category, type, privacy  }
+- Listar um -> GET /api/conectores/[ id ]
+- Editar -> PUT /api/conectores/[ id ]
+- Excluir -> DELETE /api/conectores/[ id ]
