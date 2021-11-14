@@ -46,5 +46,6 @@ As rotas do aplicativo são:
 > Listar um -> GET /api/conectores/[ id ]
 
 > Editar -> PUT /api/conectores/[ id ]
+No body enviar os campos a serem atualizados.
 
 > Excluir -> DELETE /api/conectores/[ id ]
