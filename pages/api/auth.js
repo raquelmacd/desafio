@@ -30,9 +30,8 @@ export default async (req, res) => {
             expiresIn: 31556926, // 1 year in seconds
           },
            (err, token) => {
-            
             /* Send succes with token */
-            res.status(200).json({success: true, token: token});
+            res.status(200).json({success: true, token: token });
           },
         );
 
