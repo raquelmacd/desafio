@@ -1,10 +1,16 @@
 import dbConnect from '../../../lib/dbConnect'
 import Conector from '../../../models/Conector'
+import { verifyToken } from '../../../lib/utils'
+
 
 export default async function handler(req, res) {
   const { method } = req
 
   await dbConnect()
+  const SECRET_KEY = process.env.JWT_KEY;
+  const URLtoken = req.headers.authorization
+
+  console.log(URLtoken)
 
   switch (method) {
     case 'GET':
@@ -36,4 +42,5 @@ export default async function handler(req, res) {
       res.status(405).json({ success: false , message: "Método não permitido"})
       break
   }
+
 }

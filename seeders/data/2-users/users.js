@@ -1,9 +1,13 @@
+var bcrypt = require('bcryptjs');
+
+var hash = bcrypt.hashSync('bacon', 8);
+
 module.exports = [{
     "name":"User 1",
-    "e-mail":"one@example.com",
-    "password":"PUBLIC"
+    "email":"one@example.com",
+    "password": hash
   },{
     "name":"User 2",
-    "e-mail":"second@example.com",
-    "password":"PUBLIC"
+    "email":"second@example.com",
+    "password": hash
   }]

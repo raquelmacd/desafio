@@ -7,7 +7,10 @@
     "seed": "node ./seeders/index.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
+    "js-cookie": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
     "mongo-seeding": "^3.7.0",
     "mongoose": "^6.0.11",
     "next": "latest",
