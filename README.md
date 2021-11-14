@@ -36,20 +36,15 @@ npm run dev
 ### 5. URLs da API
 *As rotas do aplicativo são:*
 
-> Listar -> GET `/api/conectores/`
-
-> Cadastrar -> POST `/api/conectores`
-
-> Filtrar -> GET `/api/conectores/`
+- Listar -> GET `/api/conectores/`
+- Cadastrar -> POST `/api/conectores`
+- Filtrar -> GET `/api/conectores/`
+>(opcional) No body enviar { name, category, type, privacy  }
+- Listar um -> GET /api/conectores/[ id ]
+>Required: id=[ObjectId]
+- Editar -> PUT `/api/conectores/[ id ]`
+>Required: id=[ObjectId]
 >
->>(opcional) No body enviar { name, category, type, privacy  }
-> Listar um -> GET /api/conectores/[ id ]
->>Required: id=[ObjectId]
-> Editar -> PUT `/api/conectores/[ id ]`
->
->>Required: id=[ObjectId]
->>No body enviar os campos a serem atualizados.
-
-> Excluir -> DELETE `/api/conectores/[ id ]`
->
->>Required: id=[ObjectId]
+>No body enviar os campos a serem atualizados.
+- Excluir -> DELETE `/api/conectores/[ id ]`
+>Required: id=[ObjectId]
