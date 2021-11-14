@@ -14,11 +14,11 @@ Rode o comando a seguir para instalar as dependências:
 npm install
 
 ```
-### 2. Alimentar o banco de dados
+### 2. Script para popular o banco de dados
 ```bash
 npm run seed
 ```
-### 2. Iniciar aplicação
+### 3. Script de inicialização da aplicação
 ```bash
 npm run dev
 ```
@@ -33,7 +33,7 @@ Por padrão, a aplicação roda no localhost:3000
     "password": "bacon"
 }
 ```
-### 5. Acessar rotas
+### 5. URLs da API
 As rotas do aplicativo são:
 
 > Listar -> GET /api/conectores/
@@ -42,10 +42,15 @@ As rotas do aplicativo são:
 
 > Filtrar -> GET /api/conectores/
 
-  (opcional) No body enviar { name, category, type, privacy  }
+(opcional) No body enviar { name, category, type, privacy  }
 > Listar um -> GET /api/conectores/[ id ]
 
+Required: id=[ObjectId]
 > Editar -> PUT /api/conectores/[ id ]
+
+Required: id=[ObjectId]
 No body enviar os campos a serem atualizados.
 
 > Excluir -> DELETE /api/conectores/[ id ]
+
+Required: id=[ObjectId]
