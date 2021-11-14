@@ -34,12 +34,12 @@ export  default async function handler(req, res) {
 
         case 'PUT' /* Edit a model by its ID */:
           try {
-            const conector = await Conector.findByIdAndUpdate(id, req.body, {
+            const conector = await Conector.findOneAndUpdate({ _id: id, status: true}, req.body, {
               new: true,
-              runValidators: true,
+              runValidators: true
             })
             if (!conector) {
-              return res.status(400).json({ success: false })
+              return res.status(400).json({ success: false, message: "Conector inválido" })
             }
             res.status(200).json({ success: true, data: conector })
           } catch (error) {

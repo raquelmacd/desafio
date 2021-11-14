@@ -1,13 +1,14 @@
+# Desafio Back-End NodeJS
+Neste projeto foi utilizado o framework NextJS porque pode ser utilizado tanto para backend quanto para frontend.
+
 
 ## Siga as instruções
 
 ### 1. Instalar dependências
 Insira o caminho para o banco MongoDB.
-Caso não tenha instalado, poderá utilizar o banco de teste na URI:
+Caso não tenha instalado, poderá utilizar o banco de teste, inserindo no arquivo .env:
 > mongodb+srv://devapi:devapi@cluster0.uhq08.mongodb.net/devapi?retryWrites=true&w=majority
-
-Insira esse caminho no arquivo .env
-
+Rode o comando a seguir para instalar as dependências:
 ```bash
 npm install
 
@@ -20,13 +21,23 @@ npm run seed
 ```bash
 npm run dev
 ```
-### 4. Acessar rotas
+### 4. Gerar Token
+Rota para gerar o token e acessar as rotas, utilize as credenciais abaixo no body no formato JSON:
+> GET http://localhost:3000/api/auth/
+ 
+```bash
+{
+    "email": "one@example.com",
+    "password": "bacon"
+}
+```
+### 5. Acessar rotas
 As rotas do aplicativo são:
 
-- Listar -> GET /api/conectores/
-- Cadastrar -> POST /api/conectores
-- Filtrar -> GET /api/conectores/
-No body enviar { name, category, type, privacy  }
-- Listar um -> GET /api/conectores/[ id ]
-- Editar -> PUT /api/conectores/[ id ]
-- Excluir -> DELETE /api/conectores/[ id ]
+> Listar -> GET /api/conectores/
+> Cadastrar -> POST /api/conectores
+> Filtrar -> GET /api/conectores/
+  No body enviar { name, category, type, privacy  }
+> Listar um -> GET /api/conectores/[ id ]
+> Editar -> PUT /api/conectores/[ id ]
+> Excluir -> DELETE /api/conectores/[ id ]
