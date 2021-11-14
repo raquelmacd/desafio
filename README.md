@@ -37,9 +37,14 @@ Por padrão, a aplicação roda no localhost:3000
 As rotas do aplicativo são:
 
 > Listar -> GET /api/conectores/
+
 > Cadastrar -> POST /api/conectores
+
 > Filtrar -> GET /api/conectores/
+
   No body enviar { name, category, type, privacy  }
 > Listar um -> GET /api/conectores/[ id ]
+
 > Editar -> PUT /api/conectores/[ id ]
+
 > Excluir -> DELETE /api/conectores/[ id ]
