@@ -42,7 +42,7 @@ As rotas do aplicativo são:
 
 > Filtrar -> GET /api/conectores/
 
-  No body enviar { name, category, type, privacy  }
+  (opcional) No body enviar { name, category, type, privacy  }
 > Listar um -> GET /api/conectores/[ id ]
 
 > Editar -> PUT /api/conectores/[ id ]
