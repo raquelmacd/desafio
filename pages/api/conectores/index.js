@@ -7,7 +7,12 @@ export default async function handler(req, res) {
   const { method } = req
   var token = req.headers.authorization
   const SECRET_KEY = process.env.JWT_KEY;
-  token = token.replace("Bearer ","")
+  if(typeof token !== 'undefined'){
+    token = token.replace("Bearer ","")
+  }else{
+    res.status(400).json({ success: false , message: "Token Missing. Erro:"+err.message})
+  }
+
 try{
   const userToken = await jwt.verify(token,SECRET_KEY)
   const userLogged = await User.find({email: userToken.email})
@@ -51,7 +56,7 @@ try{
   }
 }
 catch(err){
-  res.status(400).json({ success: false , message: "Token Missing"})
+  res.status(400).json({ success: false , message: "Token Missing. Erro:"+err.message})
 }
 
  
