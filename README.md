@@ -5,10 +5,7 @@
 ## Siga as instruções
 
 ### 1. Instalar dependências
-*Insira o caminho para o banco MongoDB.*
-*Caso não tenha instalado, poderá utilizar o banco de teste, inserindo no arquivo .env*:
-> mongodb+srv://devapi:devapi@cluster0.uhq08.mongodb.net/devapi?retryWrites=true&w=majority
-
+*Insira o caminho para o banco MongoDB no arquivo .env.*
 *Rode o comando a seguir para instalar as dependências:*
 ```bash
 npm install
